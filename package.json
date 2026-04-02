@@ -1,0 +1,36 @@
+{
+  "name": "claude-budget",
+  "version": "1.0.0",
+  "description": "Stop burning Opus tokens on subagents. One command to install model routing, budget-aware agents, and enforcement hooks for Claude Code.",
+  "type": "module",
+  "bin": {
+    "claude-budget": "./bin/cli.js"
+  },
+  "keywords": [
+    "claude",
+    "claude-code",
+    "subagents",
+    "model-routing",
+    "budget",
+    "opus",
+    "sonnet",
+    "haiku",
+    "token-optimization",
+    "cost-optimization"
+  ],
+  "author": "JacobiusMakes",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JacobiusMakes/claude-budget"
+  },
+  "files": [
+    "bin/",
+    "agents/",
+    "hooks/",
+    "templates/"
+  ],
+  "engines": {
+    "node": ">=18"
+  }
+}
