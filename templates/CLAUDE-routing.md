@@ -1,7 +1,15 @@
 <!-- claude-budget:start -->
-# Model Routing (installed by claude-budget)
+# Opus = Orchestrator, Not Worker (installed by claude-budget)
 
-Every Agent tool call MUST specify a `model:` parameter. Never let subagents inherit the parent model.
+The main thread (Opus) should THINK and DELEGATE. Subagents do the tool work on cheaper models.
+
+**Before using Read/Grep/Bash directly, ask: could a subagent do this?**
+
+Delegate to subagents when: searching multiple files, reading 3+ files, running tests, git ops, writing new code, creating PRs, web research.
+
+Use tools directly only for: quick single reads for immediate decisions, Edits/Writes, trivial lookups.
+
+Every Agent tool call MUST specify a `model:` parameter.
 
 | Task | model | subagent_type |
 |------|-------|---------------|
@@ -16,8 +24,5 @@ Every Agent tool call MUST specify a `model:` parameter. Never let subagents inh
 | Web research | `sonnet` | web-researcher |
 | Architecture/planning | (default) | Plan |
 
-**Rules:**
-1. DELEGATE to subagents — don't do research/search/tests on the main Opus thread
-2. Launch parallel agents when tasks are independent
-3. 3 Haiku agents in parallel cost less than 1 Opus doing them sequentially
+Launch parallel agents when tasks are independent. 3 Haiku agents < 1 Opus sequential.
 <!-- claude-budget:end -->

@@ -1,7 +1,7 @@
 {
   "name": "claude-budget",
-  "version": "1.0.0",
-  "description": "Stop burning Opus tokens on subagents. One command to install model routing, budget-aware agents, and enforcement hooks for Claude Code.",
+  "version": "1.1.0",
+  "description": "Stop burning Opus tokens. Makes Opus the orchestrator, delegates tool work to Sonnet/Haiku subagents. One command install.",
   "type": "module",
   "bin": {
     "claude-budget": "./bin/cli.js"
